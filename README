@@ -1,0 +1,45 @@
+Kensley Schonauer
+101183280
+
+src files:
+
+1. Date.cc Date.h:
+ -Store information about Dates
+2. Array.h:
+ -An abstract container for data with overloaded operators.
+3. Photo.cc Photo.h:
+ -Contains information about a particular photo.
+4. Album.cc Album.h:
+ -Contains information about the album.
+ -Maintains a collection of Photos.
+5. Criteria.cc Criteria.h:
+ -This class is used to match user searches to matching Photo objects. There are an additional three derived
+classes arranged in a diamond hierarchy, Cat_Criteria (category), Date_Criteria, and CandD_Criteria
+(both date and category).
+6. MediaFactory.cc MediaFactory.h:
+ -This class is used to create Photos, Albums, and Criteria objects. It separates our application logic from
+the creation of Photos, Albums, or Criteria types.
+7. PhotoGram.cc PhotoGram.h:
+ -This class contains the master list of Photos and a collection of Albums. Users can add Photos to the
+master list, and add or remove Albums. In addition we can search for Photos and these Photos can be
+added to an Album. In addition, in conjunction with the AlbumCreator and View objects, users can browse Albums and Photos.
+8. AlbumCreator.cc AlbumCreator.h:
+ -Controls the interaction of PhotoGram with the View.
+ -Maintains its own list of Photos found during the latest search.
+9. View.cc View,h:
+ -Prints menus, Albums, or Photos, and takes input.
+10. main.cc
+
+
+defs.h -holds constants such as MENU_ITEMS numbers
+
+Makefile
+
+compilation instructions:
+make
+
+launching instructions:
+./a4
+
+cleaning instructions:
+make clean
